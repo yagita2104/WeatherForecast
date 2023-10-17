@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_current"
+    tools:context=".activity.WeatherCurrent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlToolbarFR"
+        android:layout_margin="20dp">
+        <ImageView
+            android:id="@+id/imgBackFR"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:id="@+id/txtBackFR"
+            android:layout_toRightOf="@+id/imgBackFR"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            style="@style/semarang"
+            android:text="Back"/>
+        <ImageView
+            android:id="@+id/imgSettingFR"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_setting"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlTodayFR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rlToolbarFR"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            style="@style/semarang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Today" />
+
+        <TextView
+            android:id="@+id/txtDateFR"
+            style="@style/sep_12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:text="Sep, 12" />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/rlTodayFR"
+        android:id="@+id/rvWeatherTodayFR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <RelativeLayout
+        android:layout_below="@id/rvWeatherTodayFR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlNextForecast"
+        android:layout_margin="40dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/next_foreca"
+            android:text="Next Forecast 3 days"/>
+        <ImageView
+            android:src="@drawable/ic_calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:text="Sep, 12" />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_below="@id/rlNextForecast"
+        android:id="@+id/rvNextForecastFR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

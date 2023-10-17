@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_current"
+    tools:context=".activity.WeatherCurrent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlToolbar"
+        android:layout_margin="40dp">
+        <ImageView
+            android:id="@+id/imgLocation"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_loc"
+            android:layout_centerVertical="true"
+            />
+        <TextView
+            android:id="@+id/txtCityName"
+            android:layout_toRightOf="@+id/imgLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            style="@style/semarang"
+            android:text="HaNoi"/>
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_toRightOf="@+id/txtCityName"
+            android:src="@drawable/ic_opt"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            />
+        <ImageView
+            android:id="@+id/imgNoti"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_noti"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imgWeatherCurrent"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@+id/rlToolbar"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/ic_launcher" />
+
+    <RelativeLayout
+        android:id="@+id/rectangle_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgWeatherCurrent"
+        android:layout_above="@+id/btnForecastReport"
+        android:layout_marginBottom="20dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rectangle_2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtDateCurrent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:lineHeight="23sp"
+            android:text="Today, 8 July"
+            android:textAppearance="@style/today_12_se" />
+
+        <TextView
+            android:id="@+id/txtTempCurrent"
+            style="@style/some_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtDateCurrent"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="-16dp"
+            android:text="29°" />
+
+        <TextView
+            android:id="@+id/txtWeatherCurrent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtTempCurrent"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="-13dp"
+            android:text="Cloudy"
+            android:textAppearance="@style/cloudy" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtWeatherCurrent"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_windy" />
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_humidity" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wind"
+                    android:textAppearance="@style/wind" />
+
+                <TextView
+                    style="@style/wind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Humidity" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/wind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="|" />
+
+                <TextView
+                    style="@style/wind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="|" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtWindCurrent"
+                    style="@style/wind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10 km/h" />
+
+                <TextView
+                    android:id="@+id/txtHumidityCurrent"
+                    style="@style/wind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="54 %" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnForecastReport"
+        style="@style/forecast_re"
+        android:layout_width="220dp"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/rectangle_3"
+        android:drawableEnd="@drawable/ic_arrow_down_24"
+        android:paddingEnd="16dp"
+        android:elevation="50dp"
+        android:fontFamily="@font/overpass"
+        android:text="Forecast report" />
+    
+    
+</RelativeLayout>
